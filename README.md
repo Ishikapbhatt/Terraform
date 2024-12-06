@@ -11,9 +11,16 @@ sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
    11  terraform -install-autocomplete
    12  terraform version
 
+snap install aws-cli --classic
+aws configure
+
    mkdir my-terraform-project
    15  cd my-terraform-project/
 
+    export AWS_ACCESS_KEY_ID=
+   39  export AWS_SECRET_ACCESS_KEY=
+
+   
    nano main.tf 
    41  terraform init
    42  terraform init --upgrade
