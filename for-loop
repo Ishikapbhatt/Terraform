@@ -1,0 +1,7 @@
+variable "names" {
+  default = ["dev", "test", "prod"]
+}
+
+output "bucket_map" {
+  value = { for name in var.names : name => "${name}-bucket" }
+}
