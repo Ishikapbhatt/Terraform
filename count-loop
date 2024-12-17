@@ -1,0 +1,9 @@
+resource "aws_instance" "example" {
+  count         = 3  # Creates 3 instances
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "example-instance-${count.index}"
+  }
+}
