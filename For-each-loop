@@ -1,0 +1,6 @@
+resource "aws_s3_bucket" "example" {
+  for_each = toset(["dev-bucket", "test-bucket", "prod-bucket"])
+  
+  bucket = each.key
+  acl    = "private"
+}
