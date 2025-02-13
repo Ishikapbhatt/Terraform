@@ -1,0 +1,1 @@
+terraform import aws_instance.my_instance i-0abcd1234efgh5678
